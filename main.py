@@ -7,14 +7,14 @@ from constants import *
 
 
 def main():
-    pygame.init
+    pygame.init()
     print("Starting asteroids!\nScreen width: 1280\nScreen height: 720")
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+    pygame.display.init()
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
-        pygame.display.init()
         screen.fill((0, 0, 0))
         pygame.display.flip()
 
